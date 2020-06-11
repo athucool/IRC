@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+    <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <div class="jumbotron">     
+         <h1> Welcome</h1>
+            <div class='jumbotron'>
+                     
+                    <form method="post">
+                        {% csrf_token %}
+                        <p>
+                            <label for="id_date_time">Date_time:</label> 
+                            <input type="text" name="date_time" required="" id="id_date_time" placeholder='Y-M-D H:M*'>
+                        </p>
+
+                        <p>
+                            <label for="id_url">Url:</label> 
+                            <input type="url" name="url" maxlength="200" required="" id="id_url">
+                        </p>
+
+                        <button type="submit">submit</button>
+                    </form>
+        </div>
+
+    </body>
+</html>
